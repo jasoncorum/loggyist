@@ -1,0 +1,7 @@
+== LOGGYIST
+
+Loggyist is an online application built for lobbyists to register their lobbying activities and political contribution under the Foreign Agents Registration Act.
+
+* Ruby version: ruby 2.1.1
+
+* Rails version: Rails 4.1.1
