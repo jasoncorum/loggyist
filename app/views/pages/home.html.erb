@@ -1,1 +1,12 @@
-<h1>Home</h1>
+<% provide(:title, 'Home') %>
+
+<div class="jumbotron">
+	<% if lobbyist_signed_in? %>
+		<h1>You're logged in!</h1>
+	<% else %>
+		<h1>Welcome to Loggyist!</h1>
+		<p>Loggyist is an awesome tool for tracking your political activities and contributions.</p>
+		<p>Stay in compliance!</p>
+		<%= link_to "Sign in", new_lobbyist_session_path, class: "btn btn-primary btn-lg" %>
+	<% end %>
+</div>
