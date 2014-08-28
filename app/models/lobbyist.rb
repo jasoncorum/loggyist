@@ -1,6 +1,6 @@
 class Lobbyist < ActiveRecord::Base
   
-  belongs_to :admin, inverse_of: :lobbyist
+  has_many :contributions, inverse_of: :lobbyist
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
