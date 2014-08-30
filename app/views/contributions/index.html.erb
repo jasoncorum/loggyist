@@ -9,6 +9,10 @@
 <strong>Recipient: <%= con.recipient %></strong></br>
 Date: <%= con.date %></br>
 Amount: $<%= con.amount %></br>
+<% if con.notes != nil %>
+Notes: <%= con.notes %></br>
+<% end %>
+
 <sub><%= link_to "Edit", edit_contribution_path(con) %> | <%= link_to "Delete", contribution_path(con),
                     method: :delete, data: { confirm: 'Are you sure you want to delete this contribution?' }  %></sub>
 <hr>

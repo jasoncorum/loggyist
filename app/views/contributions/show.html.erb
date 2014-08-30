@@ -4,6 +4,7 @@
 <p>Recipient: <strong><%= "#{@contribution.recipient}" %></strong>.<br />
 Date: $<%= "#{@contribution.date}" %>. <br />
 Amount: $<%= "#{@contribution.amount}" %>. <br />
+Notes: <%= "#{@contribution.notes}" %>. <br />
 <sub><%= link_to "View All Contributions", contributions_path %> | <%= link_to "Edit", edit_contribution_path %> | <%= link_to "Delete", contribution_path,
                     method: :delete, data: { confirm: 'Are you sure you want to delete this contribution?' }  %></sub>
 </p>
