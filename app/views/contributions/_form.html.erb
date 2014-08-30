@@ -1,0 +1,21 @@
+<p>
+<%= form_for @contribution do |f| %>
+	<div class="form-group">
+		<%= f.label :recipient, "Please enter the recipient of your contribution:", class: "control-label" %><br />
+		<%= f.text_field :recipient, autofocus: true, class: "form-control" %></div>
+	
+	<div class="form-group">
+		<%= f.label :amount, "Please enter the amount of your contribution:", class: "control-label" %><br />
+		<%= f.text_field :amount, class: "form-control" %></div>
+	
+	<div class="form-group">
+		<%= f.label :date, "Please enter the date of your contribution:", class: "control-label" %><br />
+		<%= f.date_select :date, class: "form-control" %></div>
+
+		<div class="form-group">
+		<%= f.label :notes, "Please enter any additional notes you may have:", class: "control-label" %><br />
+		<%= f.text_area :notes, class: "form-control" %></div>
+</p>
+
+  <p><%= f.submit "Save", class: "btn btn-primary btn-lg" %></p>
+<% end %>

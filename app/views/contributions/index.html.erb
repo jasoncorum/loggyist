@@ -1,0 +1,17 @@
+<% provide(:title, 'All Contributions') %>
+<h2>Your Contributions</h2>
+<p>Here are your all your political contributions.</p>
+</div>
+
+<% @lobbyist_contributions.each do |con| %>
+
+<div class="container">
+<strong>Recipient: <%= con.recipient %></strong></br>
+Date: <%= con.date %></br>
+Amount: $<%= con.amount %></br>
+<sub><%= link_to "Edit", edit_contribution_path(con) %> | <%= link_to "Delete", contribution_path(con),
+                    method: :delete, data: { confirm: 'Are you sure you want to delete this contribution?' }  %></sub>
+<hr>
+
+</div>
+<% end %>
