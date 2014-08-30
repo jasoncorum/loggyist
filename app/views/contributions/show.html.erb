@@ -1,12 +1,12 @@
 <% provide(:title, 'Contribution') %>
 <h2>Here is Your Contribution</h2>
 
-<p>Recipient: <strong><%= "#{@contribution.recipient}" %></strong>.<br />
-Date: $<%= "#{@contribution.date}" %>. <br />
-Amount: $<%= "#{@contribution.amount}" %>. <br />
+<p>Recipient: <strong><%= "#{@contribution.recipient}" %></strong><br />
+Date: $<%= "#{@contribution.date}" %><br />
+Amount: $<%= "#{@contribution.amount}" %><br />
 
 <% if @contribution.notes != nil %>
-	Notes: <%= "#{@contribution.notes}" %>. <br />
+	Notes: <%= "#{@contribution.notes}" %><br />
 <% end %>
 
 <sub><%= link_to "View All Contributions", contributions_path %> | <%= link_to "Edit", edit_contribution_path %> | <%= link_to "Delete", contribution_path,
