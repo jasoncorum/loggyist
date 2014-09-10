@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  date: 2014-09-10
+  start: 2014-09-10 16:17:01
+  end: 2014-09-10 16:17:01
+  attendee_first_name: MyString
+  attendee_last_name: MyString
+  office: MyString
+  from_phone: MyString
+  to_phone: MyString
+  subject: MyText
+
+two:
+  type: 
+  date: 2014-09-10
+  start: 2014-09-10 16:17:01
+  end: 2014-09-10 16:17:01
+  attendee_first_name: MyString
+  attendee_last_name: MyString
+  office: MyString
+  from_phone: MyString
+  to_phone: MyString
+  subject: MyText
