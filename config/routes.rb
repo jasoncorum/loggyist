@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Example resource route with options:
   resources :contributions
+  resources :activities
   
   #   resources :products do
   #     member do
