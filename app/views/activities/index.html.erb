@@ -1,0 +1,18 @@
+<% provide(:title, 'All Political Activities') %>
+<h2>Your Political Activities</h2>
+<p>Here are your all your political activities.</p>
+</div>
+
+<% @lobbyist_activities.each do |act| %>
+
+<div class="container">
+<strong>Type: <%= act.type %></strong></br>
+Date: <%= act.date %></br>
+Amount: $<%= con.amount %></br>
+
+<sub><%= link_to "Edit", edit_activity_path(act) %> | <%= link_to "Delete", activity_path(act),
+                    method: :delete, data: { confirm: 'Are you sure you want to delete this political activity?' }  %></sub>
+<hr>
+
+</div>
+<% end %>

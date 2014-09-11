@@ -6,7 +6,6 @@ before_action :set_activities_create, only: [:create]
 
   def index
     @lobbyist_activities = current_lobbyist.activities.all
-
   end	
 
   def new
@@ -53,8 +52,8 @@ before_action :set_activities_create, only: [:create]
  		redirect_to root_path, notice: "Not authorized to access this section of Loggyist." if @activity.nil?
  	end
 
-  def set_activites_create
-    @activity = current_lobbyist.activity.build(activity_params)
+  def set_activities_create
+    @activity = current_lobbyist.activities.build(activity_params)
   end
 
 end

@@ -1,0 +1,16 @@
+<% provide(:title, 'New Political Activity') %>
+
+<div class="col-md-offset-3 col-sm-6">
+
+<% if @activity.errors.any? %>
+	<% @activity.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+<% end %>
+
+<h2>New Political Activity</h2>
+<p>Enter a new political activity in the form below.</p>
+
+<%= render partial: 'form' %>
+
+</div>
