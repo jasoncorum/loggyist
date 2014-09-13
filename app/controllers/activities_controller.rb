@@ -10,7 +10,7 @@ before_action :set_activities_create, only: [:create]
 
   def new
   	@activity = current_lobbyist.activities.build
-    @options_for_activity_type = ["Select Activity", "Phone Call", "Email", "Meeting"]
+    @options_for_activity_type = ["-- Select Activity --", "Phone Call", "Email", "Meeting"]
 	end
 
   def create

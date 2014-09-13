@@ -6,9 +6,8 @@
 <% @lobbyist_activities.each do |act| %>
 
 <div class="container">
-<strong>Type: <%= act.type %></strong></br>
+<strong>Type: <%= act.activity_type %></strong></br>
 Date: <%= act.date %></br>
-Amount: $<%= con.amount %></br>
 
 <sub><%= link_to "Edit", edit_activity_path(act) %> | <%= link_to "Delete", activity_path(act),
                     method: :delete, data: { confirm: 'Are you sure you want to delete this political activity?' }  %></sub>
