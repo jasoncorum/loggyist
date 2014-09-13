@@ -10,6 +10,7 @@ before_action :set_activities_create, only: [:create]
 
   def new
   	@activity = current_lobbyist.activities.build
+    @options_for_activity_type = ["Phone Call", "Email", "Meeting"]
 	end
 
   def create
@@ -44,7 +45,7 @@ before_action :set_activities_create, only: [:create]
   private
 
 	def activity_params
-  	params.require(:activity).permit(:type, :date, :start, :end, :attendee_first_name, :attendee_last_name, :office, :from_phone, :to_phone, :subject)
+  	params.require(:activity).permit(:activity_type, :date, :start, :end, :attendee_first_name, :attendee_last_name, :office, :from_phone, :to_phone, :subject)
 	end
 
  	def correct_lobbyist
