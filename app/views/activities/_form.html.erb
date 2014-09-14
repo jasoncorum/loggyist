@@ -1,7 +1,7 @@
 <p>
 <%= form_for @activity do |f| %>
-	<div class="form-group">
-		
+	
+		<div class="form-group">
 		<%= f.label :activity_type, "Please enter the type of political activity:", class: "control-label" %><br />
 		<%= f.select :activity_type, @options_for_activity_type, autofocus: true, class: "form-control" %></div>
 	
@@ -17,13 +17,28 @@
 		<%= f.label :end, "Please enter the end time:", class: "control-label" %><br />
 		<%= f.time_select :end, default: Time.now, minute_step: 15, ampm: true, in_time_zone: true, class: "form-control" %></div>
 
+		
+		<%= f.fields_for :attendees do |builder| %>
+		
+		<div class="form-group">
+    <%= builder.label :first_name, "Attendee First Name:", class: "control-label" %><br />
+    <%= builder.text_field :first_name, class: "form-control" %></div>
+  	
+  	<div class="form-group">
+		<%= builder.label :last_name, "Attendee Last Name:", class: "control-label" %><br />
+    <%= builder.text_field :last_name, class: "form-control" %></div>
+
+  	<% end %>
+
+
 		<div class="form-group hidden_option">
 		<%= f.label :from_phone, "From Phone Number:", class: "control-label" %><br />
 		<%= f.telephone_field :from_phone, class: "form-control" %></div>
 
 		<div class="form-group hidden_option">
 		<%= f.label :to_phone, "To Phone Number:", class: "control-label" %><br />
-		<%= f.telephone_field :to_phone, class: "form-control" %></div>		
+		<%= f.telephone_field :to_phone, class: "form-control" %></div>
+
 
 		<div class="form-group">
 		<%= f.label :subject, "Please enter the subject of your activity:", class: "control-label" %><br />
