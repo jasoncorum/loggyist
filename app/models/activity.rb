@@ -3,7 +3,7 @@ class Activity < ActiveRecord::Base
 	belongs_to :lobbyist
 	has_many :attendees, inverse_of: :activity, dependent: :destroy
 	
-	accepts_nested_attributes_for :attendees
+	accepts_nested_attributes_for :attendees, allow_destroy: true
 
 	validates :activity_type, :date, :start, :end, presence: true
 	validate :check_activity_type, on: :create

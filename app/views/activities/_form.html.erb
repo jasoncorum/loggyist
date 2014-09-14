@@ -16,20 +16,18 @@
 		<div class="form-group">
 		<%= f.label :end, "Please enter the end time:", class: "control-label" %><br />
 		<%= f.time_select :end, default: Time.now, minute_step: 15, ampm: true, in_time_zone: true, class: "form-control" %></div>
-
 		
 		<%= f.fields_for :attendees do |builder| %>
-		
-		<div class="form-group">
-    <%= builder.label :first_name, "Attendee First Name:", class: "control-label" %><br />
-    <%= builder.text_field :first_name, class: "form-control" %></div>
-  	
-  	<div class="form-group">
-		<%= builder.label :last_name, "Attendee Last Name:", class: "control-label" %><br />
-    <%= builder.text_field :last_name, class: "form-control" %></div>
-
-  	<% end %>
-
+  		<fieldset>
+				<div class="form-group">
+  			<%= builder.label :name, "Attendee Name:", class: "control-label" %><br />
+  			<%= builder.text_field :name, class: "form-control" %></div>
+	
+				<div class="form-group">
+  			<%= builder.check_box :_destroy %>
+				<%= builder.label :_destroy, "Remove" %></div>
+			</fieldset> 	
+		<% end %>
 
 		<div class="form-group hidden_option">
 		<%= f.label :from_phone, "From Phone Number:", class: "control-label" %><br />
