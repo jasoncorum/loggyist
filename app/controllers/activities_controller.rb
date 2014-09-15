@@ -11,7 +11,7 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
 
   def new
   	@activity = current_lobbyist.activities.build
-    3.times { @activity.attendees.build }
+    @activity.attendees.build
   end
 
   def create

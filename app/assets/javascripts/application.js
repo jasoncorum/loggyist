@@ -15,5 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap.js
 //= require activity_form.js
+//= require activity.js.coffee
 //= require_tree .
 //= require turbolinks
