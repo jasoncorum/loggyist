@@ -46,7 +46,7 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
   private
 
 	def activity_params
-  	params.require(:activity).permit(:activity_type, :date, :start, :end, :from_phone, :to_phone, :subject, attendees_attributes: [:name])
+  	params.require(:activity).permit(:activity_type, :date, :start, :end, :from_phone, :to_phone, :subject, attendees_attributes: [:id, :name, :_destroy])
 	end
 
  	def correct_lobbyist

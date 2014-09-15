@@ -18,7 +18,9 @@
 		<%= f.time_select :end, default: Time.now, minute_step: 15, ampm: true, in_time_zone: true, class: "form-control" %></div>
 		
 		<%= f.fields_for :attendees do |builder| %>
-			<%= render 'attendee_form_fields', f: builder %>
+		
+		<%= render 'attendee_form_fields', f: builder %>
+			
 		<% end %>
 
 		<div class="form-group hidden_option">
