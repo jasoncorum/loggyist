@@ -1,0 +1,27 @@
+<% provide(:title, 'Reporting Your Political Activities') %>
+
+<div class="container row">
+	
+	<h2>Reporting Your Political Activities</h2>
+
+	<div class ="pull-right range-query">
+		<%= form_tag activities_report_path, method: :get do %>
+			<%= date_field 'search[date_from', @search.date_from %>
+			<%= date_field 'search[date_to', @search.date_to %>
+			<%= submit_tag "Search", class: "btn search-btn" %>
+		<% end %>
+	</div>
+</div>
+
+<% @lobbyist_activities.each do |act| %>
+
+<div class="container">
+<strong>Type: <%= act.activity_type %></strong></br>
+Date: <%= act.date %></br>
+
+<sub><%= link_to "Edit", edit_activity_path(act) %> | <%= link_to "Delete", activity_path(act),
+                    method: :delete, data: { confirm: 'Are you sure you want to delete this political activity?' }  %></sub>
+<hr>
+
+</div>
+<% end %>

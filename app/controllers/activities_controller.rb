@@ -6,7 +6,7 @@ before_action :set_activities_create, only: [:create]
 before_action :set_options_for_activity_type, only: [:new, :edit]
 
   def index
-    @lobbyist_activities = current_lobbyist.activities.all
+    @lobbyist_activities = current_lobbyist.activities.all.reverse
   end	
 
   def new
@@ -40,6 +40,11 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
   def destroy
     @activity.destroy
     redirect_to activities_url
+  end
+
+  def report
+    @search = ActivitySearch.new(params[:search])
+    @lobbyist_activities = @search.scope
   end
 
 

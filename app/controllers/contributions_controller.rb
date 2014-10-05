@@ -5,7 +5,7 @@ before_action :correct_lobbyist, only: [:edit, :update, :destroy, :show]
 before_action :set_contribution_create, only: [:create]
 
   def index
-    @lobbyist_contributions = current_lobbyist.contributions.all
+    @lobbyist_contributions = current_lobbyist.contributions.all.reverse
 
   end	
 
