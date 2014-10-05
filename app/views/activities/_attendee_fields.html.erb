@@ -3,6 +3,9 @@
 		<%= f.label :name, "Attendee Name:", class: "control-label" %>
 		<%= f.text_field :name, class: "form-control" %>
   	<%= f.hidden_field :_destroy %>
+  	<%= f.label :office, "Office or Agency:", class: "control-label" %>
+		<%= f.text_field :office, class: "form-control" %>
+  	<%= f.hidden_field :_destroy %>
 		<%= link_to "Remove Attendee", '#', class: "remove_fields" %></br>
 
 </fieldset> 	
