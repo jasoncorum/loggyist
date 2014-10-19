@@ -3,4 +3,4 @@ if (!Modernizr.inputtypes.date) {
         // Consistent format with the HTML5 picker
         dateFormat: 'yy-mm-dd'
     });
-}
+};

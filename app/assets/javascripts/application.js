@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require modernizr
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery-ui
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap.js
-//= require modernizr
 //= require_tree .

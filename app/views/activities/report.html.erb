@@ -6,7 +6,7 @@
 
 	<div class ="pull-right range-query">
 		<%= form_tag activities_report_path, method: :get do %>
-			<%= date_field 'search[date_from', @search.date_from %>
+			<%= date_field 'search[date_from', @search.date_from, class: "date_from" %>
 			<%= date_field 'search[date_to', @search.date_to %>
 			<%= submit_tag "Search", class: "btn search-btn" %>
 		<% end %>
