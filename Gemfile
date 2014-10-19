@@ -26,6 +26,10 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+
 #For using jquery and turbolinks
 gem 'jquery-turbolinks'
 
@@ -43,6 +47,9 @@ gem 'spring',        group: :development
 
 # Devise for user authentication.
 gem 'devise'
+
+# Modernizr for JS form fallbacks. 
+gem 'modernizr-rails', '~> 2.7.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
