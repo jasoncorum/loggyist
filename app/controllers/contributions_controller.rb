@@ -41,6 +41,11 @@ before_action :set_contribution_create, only: [:create]
     redirect_to contributions_url
   end
 
+  def report
+    @search = ContributionSearch.new(params[:search])
+    @lobbyist_contributions = @search.scope
+  end
+
 
   private
 
