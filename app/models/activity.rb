@@ -12,4 +12,10 @@ class Activity < ActiveRecord::Base
     errors.add(:activity_type, "Please select a type of activity.") if activity_type.include?("Select Activity")
   end
 
+  def self.activity_search(param) #date_from) #, date_to)
+		where('date >= :query', query: param)
+
+		# where('date >= :query1 AND date <= :query2', query1: "%#{date_from}%", query2: "%#{date_to}")
+	end
+
 end

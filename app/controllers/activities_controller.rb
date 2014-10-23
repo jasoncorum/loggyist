@@ -43,8 +43,13 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
   end
 
   def report
-    @search = ActivitySearch.new(params[:search])
-    @lobbyist_activities = @search.scope
+    # @search = ActivitySearch.new(params[:search])
+    # @lobbyist_activities = @search.scope
+    if params[:q] # && params[:date_to]
+      @lobbyist_activities = current_lobbyist.activities.activity_search(params[:q]) #, params[:date_to])
+    else
+      @lobbyist_activities = current_lobbyist.activities.all.reverse
+    end 
   end
 
 
