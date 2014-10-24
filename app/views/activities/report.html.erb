@@ -6,8 +6,8 @@
 
   <div class ="pull-right range-query">
     <%= form_tag activities_report_path, method: :get do %>
-      <%= date_field :q, params[:q] %>
-      <%= date_field :q2, params[:q2] %>
+      <%= text_field :q, params[:q] %>
+      <%= text_field :q2, params[:q2] %>
       <%= submit_tag('Search') %>
     <% end %>
   </div>
