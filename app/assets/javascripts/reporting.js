@@ -4,6 +4,7 @@
 //         dateFormat: 'yy-mm-dd'
 //     });
 // };
+
 $(function (){
   $('#q_').datepicker({
       defaultDate: "0",
@@ -11,16 +12,16 @@ $(function (){
       changeMonth: true,
       numberOfMonths: 1,
       onClose: function( selectedDate ) {
-        $( "#q2_" ).datepicker( "option", "minDate", selectedDate );
+        $( '#q2_' ).datepicker( "option", "minDate", selectedDate );
       }
     });
-      $( "#q2_" ).datepicker({
+   $("#q2_").datepicker({
       defaultDate: "0",
       dateFormat: "yy-mm-dd",
       changeMonth: true,
       numberOfMonths: 1,
       onClose: function( selectedDate ) {
-        $( "#q_" ).datepicker( "option", "maxDate", selectedDate );
+        $( '#q_' ).datepicker( "option", "maxDate", selectedDate );
       }
 		});
   });

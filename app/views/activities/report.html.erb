@@ -5,9 +5,11 @@
 	<h2>Reporting Your Political Activities</h2>
 
   <div class ="pull-right range-query">
-    <%= form_tag activities_report_path, method: :get do %>
-      <%= text_field :q, params[:q] %>
-      <%= text_field :q2, params[:q2] %>
+    <%= form_tag(activities_report_path, method: :get) do %>
+      <%= label_tag :q, "Start" %>
+      <%= text_field(:q, params[:q]) %>
+      <%= label_tag :q2, "End" %>
+      <%= text_field(:q2, params[:q2]) %>
       <%= submit_tag('Search') %>
     <% end %>
   </div>
