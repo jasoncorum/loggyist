@@ -4,13 +4,16 @@
 	
 	<h2>Reporting Your Political Contributions</h2>
 
-	<div class ="pull-right range-query">
-		<%= form_tag contributions_report_path, method: :get do %>
-			<%= date_field 'search[date_from', @search.date_from, class: "date_from" %>
-			<%= date_field 'search[date_to', @search.date_to %>
-			<%= submit_tag "Search", class: "btn search-btn" %>
-		<% end %>
-	</div>
+  <div class ="pull-right range-query">
+    <%= form_tag(contributions_report_path, method: :get) do %>
+      <%= label_tag :q, "Start" %>
+      <%= text_field(:q, params[:q]) %>
+      <%= label_tag :q2, "End" %>
+      <%= text_field(:q2, params[:q2]) %>
+      <%= submit_tag('Search') %>
+    <% end %>
+  </div>
+
 </div>
 
 <div class="media container">

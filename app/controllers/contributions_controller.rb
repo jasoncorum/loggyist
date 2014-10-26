@@ -42,10 +42,12 @@ before_action :set_contribution_create, only: [:create]
   end
 
   def report
-    @search = ContributionSearch.new(params[:search])
-    @lobbyist_contributions = @search.scope
+    if params[:q] != nil && params[:q2] != nil
+      @lobbyist_contributions = current_lobbyist.contributions.contribution_search(params[:q], params[:q2]).reverse
+    else
+      @lobbyist_contributions = current_lobbyist.contributions.all.reverse
+    end 
   end
-
 
   private
 
