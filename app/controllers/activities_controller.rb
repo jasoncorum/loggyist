@@ -43,7 +43,7 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
   end
 
   def report
-    if params[:q] != nil && params[:q2] != nil
+    if params[:q].present? && params[:q2].present?
       @lobbyist_activities = current_lobbyist.activities.activity_search(params[:q], params[:q2]).reverse
     else
       @lobbyist_activities = current_lobbyist.activities.all.reverse
