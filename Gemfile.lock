@@ -68,8 +68,12 @@ GEM
     modernizr-rails (2.7.1)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
+    pdf-core (0.4.0)
     pg (0.17.1)
     polyglot (0.3.5)
+    prawn (1.3.0)
+      pdf-core (~> 0.4.0)
+      ttfunk (~> 1.4.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -124,6 +128,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.4.0)
     turbolinks (2.4.0)
       coffee-rails
     tzinfo (1.2.2)
@@ -146,6 +151,7 @@ DEPENDENCIES
   jquery-ui-rails
   modernizr-rails (~> 2.7.1)
   pg
+  prawn
   rails (= 4.1.1)
   rails_12factor
   sass-rails (~> 4.0.3)

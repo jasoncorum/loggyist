@@ -6,10 +6,10 @@
 
   <div class ="pull-right range-query">
     <%= form_tag(activities_report_path, method: 'get') do %>
-      <%= label_tag :q, "Start" %>
-      <%= text_field(:q, params[:q]) %>
-      <%= label_tag :q2, "End" %>
-      <%= text_field(:q2, params[:q2]) %>
+      <%= label_tag :from, "Start" %>
+      <%= text_field(:from, params[:from]) %>
+      <%= label_tag :to, "End" %>
+      <%= text_field(:to, params[:to]) %>
       <%= submit_tag('Search') %>
     <% end %>
   </div>

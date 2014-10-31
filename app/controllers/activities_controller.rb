@@ -43,11 +43,20 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
   end
 
   def report
-    if params[:q].present? && params[:q2].present?
-      @lobbyist_activities = current_lobbyist.activities.activity_search(params[:q], params[:q2]).reverse
+    if params[:from].present? && params[:to].present?
+      @lobbyist_activities = current_lobbyist.activities.activity_search(params[:from], params[:to]).reverse
     else
       @lobbyist_activities = current_lobbyist.activities.all.reverse
-    end 
+    end
+    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = Prawn::Document.new
+        pdf.text "Hello World"
+        send_data pdf.render 
+      end
+    end
   end
 
 
