@@ -48,15 +48,6 @@ before_action :set_options_for_activity_type, only: [:new, :edit]
     else
       @lobbyist_activities = current_lobbyist.activities.all.reverse
     end
-    
-    respond_to do |format|
-      format.html
-      format.pdf do
-        pdf = Prawn::Document.new
-        pdf.text "Hello World"
-        send_data pdf.render 
-      end
-    end
   end
 
 
