@@ -6,7 +6,6 @@ before_action :set_contribution_create, only: [:create]
 
   def index
     @lobbyist_contributions = current_lobbyist.contributions.all.reverse
-
   end	
 
   def new

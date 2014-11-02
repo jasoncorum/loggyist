@@ -1,6 +1,7 @@
 class Contribution < ActiveRecord::Base
 
 	belongs_to :lobbyist, inverse_of: :contributions, dependent: :destroy
+	belongs_to :contribution_report
 	
 	validates :recipient, :date, presence: true
 	validates :amount, numericality: { only_integer: true }
@@ -14,7 +15,7 @@ class Contribution < ActiveRecord::Base
   	NULL_ATTRS.each { |attr| self[attr] = nil if self[attr].blank? }
   end
 
-   def self.contribution_search(param, param2)
+  def self.contribution_search(param, param2)
 		where('date >= :query AND date <= :query2', query: param, query2: param2)
 	end
 
