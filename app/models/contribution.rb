@@ -1,7 +1,7 @@
 class Contribution < ActiveRecord::Base
 
 	belongs_to :lobbyist, inverse_of: :contributions, dependent: :destroy
-	belongs_to :contribution_report
+	has_and_belongs_to_many :contribution_report
 	
 	validates :recipient, :date, presence: true
 	validates :amount, numericality: { only_integer: true }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102184502) do
+ActiveRecord::Schema.define(version: 20141102191004) do
 
   create_table "activities", force: true do |t|
     t.string   "activity_type"
@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 20141102184502) do
     t.date   "from_date"
     t.date   "to_date"
     t.string "lobbyist_id"
+  end
+
+  create_table "contribution_reports_contributions", id: false, force: true do |t|
+    t.integer "contribution_id",        null: false
+    t.integer "contribution_report_id", null: false
   end
 
   create_table "contributions", force: true do |t|
