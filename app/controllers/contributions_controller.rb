@@ -46,15 +46,6 @@ before_action :set_contribution_create, only: [:create]
     else
       @lobbyist_contributions = current_lobbyist.contributions.all.reverse
     end 
-
-    # respond_to do |format|
-    #   format.html
-    #   format.pdf do
-    #     pdf = Prawn::Document.new
-    #     pdf.text "Hello World"
-    #     send_data pdf.render
-    #   end
-    # end
   end
 
   private

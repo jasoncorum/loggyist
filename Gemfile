@@ -49,11 +49,9 @@ gem 'devise'
 # Modernizr for JS form fallbacks. 
 gem 'modernizr-rails', '~> 2.7.1'
 
-# Prawn for PDF report generation.
-gem 'prawn'
-
-# PDFKit for PDF report generation.
+# PDFKit and wkhtmltopdf for PDF report generation.
 gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
