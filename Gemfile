@@ -52,6 +52,9 @@ gem 'modernizr-rails', '~> 2.7.1'
 # Prawn for PDF report generation.
 gem 'prawn'
 
+# PDFKit for PDF report generation.
+gem 'pdfkit'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
